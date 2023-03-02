@@ -1,4 +1,4 @@
-import { isPrime } from '../../src/mathmatics/isPrime'
+import { isPrime } from '../../src/mathematics/isPrime'
 
 test('1 is false', function () {
     expect(isPrime(1)).toBe(false);
