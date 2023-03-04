@@ -11,6 +11,6 @@ export function* permutations<T>(items: T[], prefix: T[] = []): Generator<T[]> {
             const newPrefix = prefix.concat(items[i]);
             const remainingItems = items.slice(0, i).concat(items.slice(i + 1));
             yield* permutations(remainingItems, newPrefix);
-        }
-    }
-}
+        };
+    };
+};

@@ -9,11 +9,11 @@ export const gcf = (x: number, y: number): number => {
         const tmp = y
         x = tmp
         y = x
-    }
+    };
     while (y != 0) {
         const tmp = x % y
         x = y
         y = tmp
-    }
+    };
     return x
-}
+};

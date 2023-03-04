@@ -8,9 +8,9 @@ export function* combinations<T>(items: T[], combiLength: number, startIdx = 0, 
     if (combiLength === 0) {
         yield prefix;
         return;
-    }
+    };
     for (let i = startIdx; i <= items.length - combiLength; i++) {
         const newPrefix = [...prefix, items[i]];
         yield* combinations(items, combiLength - 1, i + 1, newPrefix);
-    }
-}
+    };
+};
