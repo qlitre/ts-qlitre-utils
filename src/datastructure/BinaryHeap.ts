@@ -1,5 +1,5 @@
 export class BinaryHeap<T> {
-    private heap: T[];
+    public heap: T[];
     private compare: (a: T, b: T) => number;
 
     constructor(compareFn: (a: T, b: T) => number) {
