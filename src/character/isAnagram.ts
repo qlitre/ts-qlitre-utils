@@ -5,6 +5,8 @@
  * @returns アナグラムならtrueを返す
  */
 export const isAnagram = (s1: string, s2: string): boolean => {
+    s1 = s1.toLowerCase()
+    s2 = s2.toLowerCase()
     const sorted1 = s1.split('').sort((a, b) => a < b ? -1 : 1).join('')
     const sorted2 = s2.split('').sort((a, b) => a < b ? -1 : 1).join('')
 

@@ -6,14 +6,10 @@
  */
 export const gcf = (x: number, y: number): number => {
     if (y == 0) {
-        const tmp = y
-        x = tmp
-        y = x
-    };
+        [x, y] = [y, x]
+    }
     while (y != 0) {
-        const tmp = x % y
-        x = y
-        y = tmp
-    };
+        [x, y] = [y, x % y]
+    }
     return x
 };

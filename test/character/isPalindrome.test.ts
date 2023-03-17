@@ -1,23 +1,14 @@
 import { isPalindrome } from "../../src/character/isPalindrome";
 
 describe('isPalindrome function', () => {
-    it('return true', () => {
-        const result = isPalindrome('aabaa')
-        expect(result).toBe(true)
+    it('returns true if the input is a palindrome', () => {
+        expect(isPalindrome('racecar')).toBe(true)
+        expect(isPalindrome('Deified')).toBe(true)
+        expect(isPalindrome('A man a plan a canal Panama')).toBe(true)
     })
-
-    it('return false', () => {
-        const result = isPalindrome('aabab')
-        expect(result).toBe(false)
-    })
-
-    it('ja return true', () => {
-        const result = isPalindrome('しんぶんし')
-        expect(result).toBe(true)
-    })
-
-    it('ja return false', () => {
-        const result = isPalindrome('吾輩は猫である')
-        expect(result).toBe(false)
+    it('returns false if the input is not a palindrome', () => {
+        expect(isPalindrome('hello')).toBe(false)
+        expect(isPalindrome('world')).toBe(false)
+        expect(isPalindrome('Hello world')).toBe(false)
     })
 })

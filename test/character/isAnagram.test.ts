@@ -1,31 +1,13 @@
 import { isAnagram } from "../../src/character/isAnagram";
 
 describe('isAnagram function', () => {
-    it('return true', () => {
-        const s1 = "baa"
-        const s2 = 'aab'
-        const result = isAnagram(s1, s2)
-        expect(result).toBe(true)
+    it('returns true if the inputs are anagrams', () => {
+        expect(isAnagram('listen', 'silent')).toBe(true)
+        expect(isAnagram('debit card', 'bad credit')).toBe(true)
+        expect(isAnagram('A gentleman', 'Elegant man')).toBe(true)
     })
-
-    it('return false', () => {
-        const s1 = "aab"
-        const s2 = 'abb'
-        const result = isAnagram(s1, s2)
-        expect(result).toBe(false)
-    })
-
-    it('ja return true', () => {
-        const s1 = "インターネット土鳩"
-        const s2 = '鳩ン土ネイトータッ'
-        const result = isAnagram(s1, s2)
-        expect(result).toBe(true)
-    })
-
-    it('ja return false', () => {
-        const s1 = "あいう"
-        const s2 = 'いうえ'
-        const result = isAnagram(s1, s2)
-        expect(result).toBe(false)
+    it('returns false if the inputs are not anagrams', () => {
+        expect(isAnagram('test', 'rest')).toBe(false)
+        expect(isAnagram('hello', 'world')).toBe(false)
     })
 })

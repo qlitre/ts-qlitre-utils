@@ -1,16 +1,15 @@
 import { gcf } from "../../src/mathematics/gcf";
 
 describe('gcf function', () => {
-    it('2 4 => 2', () => {
-        const result = gcf(2, 4)
-        expect(result).toBe(2)
-    });
-    it('8 12 => 4', () => {
-        const result = gcf(8, 12)
-        expect(result).toBe(4)
-    });
-    it('3 7 => 1', () => {
-        const result = gcf(3, 7)
-        expect(result).toBe(1)
-    });
-});
+    it('returns the correct result when both x and y are positive integers', () => {
+        expect(gcf(12, 8)).toBe(4)
+        expect(gcf(15, 25)).toBe(5)
+        expect(gcf(7, 13)).toBe(1)
+        expect(gcf(60, 48)).toBe(12)
+    })
+    it('returns x when y is zero', () => {
+        expect(gcf(10, 0)).toBe(10)
+        expect(gcf(7, 0)).toBe(7)
+        expect(gcf(1, 0)).toBe(1)
+    })
+})

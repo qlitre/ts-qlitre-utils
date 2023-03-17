@@ -1,21 +1,15 @@
 import { bisectRight } from "../../src/bisect/bisectRight";
 
 describe('bisectRight function', () => {
-    const arr = [1, 3, 5, 7, 9]
-    it('一番小さい値', () => {
-        const result = bisectRight(arr, 0)
-        expect(result).toBe(0)
-    })
-    it('一番大きい値', () => {
-        const result = bisectRight(arr, 10)
-        expect(result).toBe(5)
-    })
-    it('存在する値', () => {
-        const result = bisectRight(arr, 3)
-        expect(result).toBe(2)
-    })
-    it('存在しない値', () => {
-        const result = bisectRight(arr, 4)
-        expect(result).toBe(2)
-    })
-})
+    it('returns the correct index if the value exists in the array', () => {
+        const arr = [1, 3, 4, 4, 4, 6, 8, 10];
+        expect(bisectRight(arr, 4)).toBe(5);
+    });
+
+    it('returns the correct index if the value does not exist in the array', () => {
+        const arr = [1, 3, 4, 6, 8, 10];
+        expect(bisectRight(arr, 5)).toBe(3);
+        expect(bisectRight(arr, 11)).toBe(6);
+        expect(bisectRight(arr, -1)).toBe(0);
+    });
+});
