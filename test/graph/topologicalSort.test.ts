@@ -29,6 +29,6 @@ describe('topologicalSort', () => {
 
         const result = topologicalSort(n, graph, intoNum)
 
-        expect(result).toEqual(-1)
+        expect(result).toEqual([])
     })
 })
