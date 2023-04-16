@@ -1,4 +1,4 @@
-import { genSeqWithinSumLimitAndLength } from '../../src/secence/genSeqWithinSumLimitAndLength'
+import { genSeqWithinSumLimitAndLength } from '../../src/sequence/genSeqWithinSumLimitAndLength'
 
 describe('genSeqWithinSumLimitAndLength', () => {
     it('generates sequences with correct length and sum', () => {
